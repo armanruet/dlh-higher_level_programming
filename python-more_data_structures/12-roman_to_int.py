@@ -36,12 +36,12 @@ def roman_to_int(roman_string):
     if "CC" in roman_string:
         sum += 200
         roman_string = roman_string.replace("CC", "")
-    if "C" in roman_string:
-        sum += 100
-        roman_string = roman_string.replace("C", "")
     if "XC" in roman_string:
         sum += 90
         roman_string = roman_string.replace("XC", "")
+    if "C" in roman_string:
+        sum += 100
+        roman_string = roman_string.replace("C", "")
     if "LXXX" in roman_string:
         sum += 80
         roman_string = roman_string.replace("LXXX", "")
