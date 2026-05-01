@@ -63,7 +63,6 @@ def roman_to_int(roman_string):
     if "XX" in roman_string:
         sum += 20
         roman_string = roman_string.replace("XX", "")
-
     if "IX" in roman_string:
         sum += 9
         roman_string = roman_string.replace("IX", "")
@@ -85,7 +84,6 @@ def roman_to_int(roman_string):
     if "V" in roman_string:
         sum += 5
         roman_string = roman_string.replace("V", "")
-
     if "III" in roman_string:
         sum += 3
         roman_string = roman_string.replace("III", "")
@@ -95,21 +93,4 @@ def roman_to_int(roman_string):
     if "I" in roman_string:
         sum += 1
         roman_string = roman_string.replace("I", "")
-
     return sum
-
-
-roman_number = "X"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "VII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "IX"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "LXXXVII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "DCCVII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
