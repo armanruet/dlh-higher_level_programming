@@ -7,4 +7,4 @@ class Square:
 
     def __init__(self, size):
         """Defining the menthod for size"""
-        self.size = size
+        self.__size = size
