@@ -7,7 +7,7 @@ class Square:
 
     def __init__(self, size=0):
         """Defining the menthod for size"""
-	self.__size = size
+        self.__size = size
         try:
             if not isinstance(self.__size, int):
                 raise TypeError
@@ -17,6 +17,7 @@ class Square:
             print("size must be an integer")
         except ValueError:
             print("size must be >= 0")
-	def area(self):
-		"""Area calculation"""
-		return self.size ** 2
+
+    def area(self):
+        """Area calculation"""
+        return self.__size ** 2
