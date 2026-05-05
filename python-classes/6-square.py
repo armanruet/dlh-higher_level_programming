@@ -7,8 +7,8 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """Defining the menthod for size"""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -28,8 +28,9 @@ class Square:
 
     @position.setter
     def position(self, value):
-        x, y = value
-        if isinstance(x, y, int):
+        if all(isinstance(i, int) for i in value):
+            self.__position = value
+        else:
             raise TypeError("position must be a tuple of 2 positive integers")
 
     def area(self):
@@ -37,11 +38,12 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        if self.size == 0:
-            print()
+        if self.__size == 0 and self.__position[1] > 0:
+            for i in range(self.__position[1]):
+                print()
         else:
             for i in range(self.size):
-                for i in range(self.position[0]):
-                    if self.position[1] <= 0:
+                for i in range(self.__position[0]):
+                    if self.__position[1] <= 0:
                         print(" ", end="")
-                print("#"*self.size)
+                print("#"*self.__size)
