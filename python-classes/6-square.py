@@ -6,7 +6,7 @@ class Square:
     """a class Square that defines a square """
 
     def __init__(self, size=0, position=(0, 0)):
-        """Defining the menthod for size"""
+        """Defining the method for size"""
         self.size = size
         self.position = position
 
@@ -40,11 +40,9 @@ class Square:
 
     def my_print(self):
         if self.__size == 0:
+            print()
+        else:
             for i in range(self.__position[1]):
                 print()
-        else:
-            for i in range(self.size):
-                for i in range(self.__position[0]):
-                    if self.__position[1] > 0:
-                        pass
-                print(" "*self.__position[0] + "#"*self.__size)
+            for i in range(self.__size):
+                print(" " * self.__position[0] + "#" * self.__size)
